@@ -32,7 +32,7 @@
               Login
             </div>
             <div class="card-body">
-              <form action="http://localhost/app_help_desk/valida_login.php" method="post">
+              <form action="http://localhost/sistema_desk_help/valida_login.php" method="post">
                 <div class="form-group">
                   <input name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
@@ -40,10 +40,19 @@
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
 
+                <!-- erro -->
                 <? if(isset($_GET['login']) && $_GET['login']== 'erro'){ ?>
 
                   <div class="text-danger">
                     Usuário ou senha inválidos(s)
+                  </div>
+                <? } ?>
+
+                <!-- erro2 -->
+                <? if(isset($_GET['login']) && $_GET['login']== 'erro2'){ ?>
+
+                  <div class="text-danger">
+                    Faça login antes de acessar as páginas protegidas!
                   </div>
                 <? } ?>
 
